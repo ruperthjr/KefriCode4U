@@ -1,0 +1,349 @@
+:root {
+  --primaryColor: hsl(0, 100%, 100%);
+  --secondaryColor: hsl(0, 0%, 0%, 0.5);
+  --deepPink: hsl(352, 71%, 77%);
+  --lightPink: hsl(353, 100%, 93%);
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Asap", sans-serif;
+}
+
+* {
+  font-size: 1rem;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 105vh;
+  min-height: 800px;
+  padding-top: 3rem;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  background-color: var(--primaryColor);
+  opacity: 0.9;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 3rem;
+  z-index: 2;
+}
+.nav__links {
+  position: relative;
+}
+.nav__links > a {
+  color: hsl(0, 0%, 0%);
+
+  text-decoration: none;
+  padding: 0 2rem;
+  font-size: 1.2rem;
+}
+
+.nav__links > a:visited {
+  color: hsl(0, 0%, 0%);
+}
+.nav__links > a:hover {
+  color: hsla(0, 0%, 0%, 0.5);
+  transition: ease-in-out 0.3s;
+}
+.nav__logo {
+  padding: 0 2rem;
+  font-size: 1.5rem;
+}
+.nav__logo:hover {
+  color: hsla(0, 0%, 0%, 0.5);
+
+  transition: ease-in-out 0.3s;
+}
+
+.landing {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("https://wallpaper.dog/large/10737713.jpg")
+    no-repeat center -3rem fixed;
+  background-size: cover;
+
+  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 90%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0%, 100% 90%, 0% 100%);
+}
+.landing__logo {
+  font-size: 12vw;
+  color: var(--primaryColor);
+}
+.landing__heading {
+  margin-bottom: 1rem;
+  font-size: 10vw;
+  font-family: "Muli", sans-serif;
+  color: var(--primaryColor);
+  /* font-weight: 700; */
+}
+.landing__box {
+  text-align: center;
+  background-color: var(--secondaryColor);
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.landing__box > p {
+  color: var(--primaryColor);
+  letter-spacing: 0.8px;
+}
+h2 {
+  text-transform: uppercase;
+  font-size: 2.5rem;
+}
+
+.about-us {
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.about__content {
+  line-height: 2;
+  font-size: 1.3.rem;
+  letter-spacing: 0.5px;
+}
+
+.about__text {
+  width: 55%;
+  margin-bottom: 4rem;
+  text-align: justify;
+}
+.about__heading {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.about__team {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.about__person {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about__name {
+  padding: 1rem;
+  transition: 2s ease-in-out;
+}
+
+.about__img {
+  width: 20vw;
+  height: 20vw;
+  border-radius: 50%;
+  object-fit: cover;
+  filter: grayscale(1);
+  opacity: 80%;
+  transition: 0.3s ease-in-out;
+}
+
+.about__person:hover .about__img {
+  filter: grayscale(0);
+  opacity: 100%;
+  transform: scaleY(1.01);
+}
+
+.about__person:hover .about__name {
+  text-decoration: underline;
+}
+
+.about__links {
+  width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.about__links--icon {
+  font-size: 3rem;
+  color: var(--secondaryColor);
+}
+
+.about__links--icon:hover {
+  opacity: 0.8;
+  transform: scale(1.1);
+  color: var(--deepPink);
+}
+
+.contact-form {
+  padding-top: 18rem;
+  padding-bottom: 10rem;
+  -webkit-clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
+  clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
+
+  background: var(--deepPink); /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    var(--lightPink),
+    var(--deepPink)
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    var(--lightPink),
+    var(--deepPink)
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  display: flex;
+  justify-content: center;
+}
+
+.contact-form__heading {
+  margin-bottom: 2rem;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  width: 60%;
+  text-align: right;
+  align-items: center;
+  justify-content: center;
+  color: hsl(0, 0%, 0%);
+  margin-bottom: 5rem;
+}
+
+.form__label {
+  width: 20%;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.form__input {
+  width: 80%;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+textarea {
+  min-height: 10rem;
+  resize: vertical;
+}
+
+.form__submit {
+  padding: 1rem;
+  width: 10rem;
+  margin: 1rem;
+  font-size: 1.1rem;
+  border-radius: 3rem;
+  background-color: var(--primaryColor);
+  transition: 0.1s ease-in-out;
+}
+
+.form__submit:hover {
+  -webkit-box-shadow: 0.2rem 0.2rem 0.2rem var(--secondaryColor);
+  -moz-box-shadow: 0.2rem 0.2rem 0.2rem var(--secondaryColor);
+  box-shadow: 0.2rem 0.2rem 0.2rem var(--secondaryColor);
+}
+.copyright-footer {
+  display: flex;
+  height: 15rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.copyright-footer__text {
+  text-align: center;
+}
+
+@media screen and (max-width: 1700px) {
+  .about__links--icon {
+    font-size: 2.6vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .landing {
+    background: url("https://images.unsplash.com/photo-1570083208073-f0c09ea8dcf0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80")
+      no-repeat -8rem 3rem fixed;
+  }
+  .landing__logo {
+    font-size: 15vw;
+  }
+  .landing__heading {
+    font-size: 12vw;
+  }
+  form {
+    width: 90%;
+    flex-direction: column;
+    text-align: left;
+    margin-bottom: 10rem;
+  }
+
+  .contact-form__heading {
+    font-size: 8vw;
+  }
+
+  .form__label {
+    width: 80%;
+    text-align: left;
+  }
+
+  .form__label {
+    padding: 0;
+    margin-top: 1rem;
+  }
+
+  .about-us {
+    height: auto;
+  }
+  .landing__title {
+    width: 65%;
+    font-size: 85%;
+  }
+  .about__team {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .about__person {
+    margin-bottom: 2rem;
+  }
+  .about__img {
+    width: 50vw;
+    height: 50vw;
+  }
+  .about__person {
+    width: 80%;
+  }
+
+  .about__text {
+    width: 80vw;
+  }
+
+  .about__links--icon {
+    font-size: 6vw;
+  }
+
+  .contact-form__heading {
+    margin-bottom: 0;
+  }
+  textarea {
+    min-height: 6rem;
+  }
+  .copyright-footer {
+    height: 5rem;
+  }
+}
